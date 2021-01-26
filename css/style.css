@@ -1,0 +1,24 @@
+* {
+    margin: 0 auto;
+    text-align: center;
+}
+Body {
+    background-color: lightblue;
+}
+#parent #parent2ND {
+    height:100vh;
+    margin: 0 auto;
+}
+.gamePicture {
+    display:flex;
+    height: 400px;
+    width: 600px;
+    margin-top: 40px;
+}
+button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#showTime {
+    
+}
