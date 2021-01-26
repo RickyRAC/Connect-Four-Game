@@ -5,20 +5,14 @@
 Body {
     background-color: lightblue;
 }
-#parent #parent2ND {
-    height:100vh;
-    margin: 0 auto;
+.selection {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 5rem;
+    transition: 100ms;
 }
-.gamePicture {
-    display:flex;
-    height: 400px;
-    width: 600px;
-    margin-top: 40px;
-}
-button {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-#showTime {
-    
+.selection:hover {
+    transform: scale(1.1);
 }
