@@ -10,8 +10,8 @@ body {
     display:flex;
     align-items: center;
     border-style: solid;
-    width: 700px;
-    height: 600px;
+    width: 800px;
+    height: 700px;
     flex-wrap: wrap;
 }
 .grid {
