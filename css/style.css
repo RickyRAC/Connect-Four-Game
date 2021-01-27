@@ -1,18 +1,25 @@
-* {
-    margin: 0 auto;
+body {
+    background-color: lightgray;
+}
+.gameTime {
+    background-color: green;
     text-align: center;
+    display: inline;
 }
-Body {
-    background-color: lightblue;
+.gameBoard {
+    display:flex;
+    align-items: center;
+    border-style: solid;
+    width: 700px;
+    height: 600px;
+    flex-wrap: wrap;
 }
-.selection {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 5rem;
-    transition: 100ms;
+.grid {
+    border-style: solid;
+    border-color: yellowgreen;
 }
-.selection:hover {
-    transform: scale(1.1);
+div {
+   width: 100px;
+   height: 100px;
+   background-color: lightblue;
 }
