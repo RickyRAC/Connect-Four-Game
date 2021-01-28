@@ -2,12 +2,29 @@ const gameBoard = document.getElementById("gameBoard")
 
 
 
-//let winners = []
+//let winners = true
 let player1Selection = []
 let player2Selection = []
 let currentPlayer = "player1"
 // let points1 = 0
 // let points = 0
+
+let row1 = document.querySelector("#row-1")
+let row2 = document.querySelector("#row-2")
+let row3 = document.querySelector("#row-3")
+let row4 = document.querySelector("#row-4")
+let row5 = document.querySelector("#row-5")
+let row6 = document.querySelector("#row-6")
+let row7 = document.querySelector("#row-7")
+
+
+// let rowA = document.querySelector("#row-1")
+// let rowB = document.querySelector("#row-2")
+// let rowC = document.querySelector("#row-3")
+// let rowD = document.querySelector("#row-4")
+// let rowE = document.querySelector("#row-5")
+// let rowF = document.querySelector("#row-6")
+// let rowG = document.querySelector("#row-7")
 
  
 
@@ -18,21 +35,39 @@ function changeTurn(e) {
     //console.log(e)
     let id = e.target.id
     //console.log(id)
+    // show how player1 wins by
     e.target.removeEventListener('click',changeTurn)
     if (currentPlayer === "player1") {
         player1Selection.push(id)
-        console.log(player1Selection)
+        
         e.target.style.backgroundColor = "black"
+        // explain 3 boxes in a row to win.
+        // player1 === [1,2,3]
+         if(row1.style.backgroundColor === "black" &&  row2.style.backgroundColor === "black" && row3.style.backgroundColor === "black"){
+         console.log(player1Selection)
+        } else if (row2.style.backgroundColor === "black" &&  row3.style.backgroundColor === "black" && row4.style.backgroundColor === "black"){
+        } else if (row3.style.backgroundColor === "black" &&  row4.style.backgroundColor === "black" && row5.style.backgroundColor === "black"){
+        } else if (row4.style.backgroundColor === "black" &&  row5.style.backgroundColor === "black" && row6.style.backgroundColor === "black"){
+        } else if (row5.style.backgroundColor === "black" &&  row6.style.backgroundColor === "black" && row7.style.backgroundColor === "black"){
+        } 
         currentPlayer = "player2"
     } else if (currentPlayer === "player2") {        
         player2Selection.push(id)
-        console.log(player2Selection)
         e.target.style.backgroundColor = "red"
-        currentPlayer = "player1"
-    }
+        if(row1.style.backgroundColor === "black" &&  row2.style.backgroundColor === "black" && row3.style.backgroundColor === "black"){
+            console.log(player1Selection)
+           } else if (row2.style.backgroundColor === "black" &&  row3.style.backgroundColor === "black" && row4.style.backgroundColor === "black"){
+           } else if (row3.style.backgroundColor === "black" &&  row4.style.backgroundColor === "black" && row5.style.backgroundColor === "black"){
+           } else if (row4.style.backgroundColor === "black" &&  row5.style.backgroundColor === "black" && row6.style.backgroundColor === "black"){
+           } else if (row5.style.backgroundColor === "black" &&  row6.style.backgroundColor === "black" && row7.style.backgroundColor === "black"){
+           } 
+     currentPlayer = "player1"
+    } 
+    
     //checkForWins(player1Selection)
     // console.log(currentPlayer)
 }
+
 
 function addEventListeners() {
     let squares = document.getElementsByClassName("grid")
@@ -51,11 +86,11 @@ addEventListeners()
 function checkForWins(square, player){
     console.log("checkingForWins")
     let possibleWins = [
-        ["row-1","row-2","row-3"], 
-        ["row-2","row-3","row-4"],
-        ["row-4","row-5","row-6"],
-        ["row-3","row-4","row-5"],
-        ["row-5","row-6","row-7"],] 
+        [row1,row2,row3], 
+        [row2,row3,row4],
+        [row3,row4,row5],
+        [row4,row5,row6],
+        [row5,row6,row7],] 
 
     for(let i = 0; i < possibleWins.length; i++){
         if (player1Selection === possibleWins[i]) {
@@ -64,8 +99,21 @@ function checkForWins(square, player){
             document.getElementById("print").innerText = "Player2 is the Winner"
          }
     
+} 
 }
-}
-    // playersSelction and player2Selection check possible wins
+    //  For(i = 0; i < possibleWins.length; i ++){
+    //     if(currentPlayer. === row1 || row3)
+    //     console.log(row1)
+    //     //e.target.style.backgroundColor = "red"
+    //     //currentPlayer = "player1"
+    //    For(j = 0; j < possibleWins[i].length; j ++){
+
+   // }
+//}
+
+
+
+
+// playersSelction and player2Selection check possible wins
     // if player1Selection or player2Selection is inside possibleWins then display winner.    
 
