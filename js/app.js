@@ -9,6 +9,8 @@ let currentPlayer = "player1"
 // let points1 = 0
 // let points = 0
 
+ 
+
 // event.target is what is going to be clicked(pokersquare game)
 //gameBoard.addEventListener('click', changeTurn) 
 
@@ -28,7 +30,7 @@ function changeTurn(e) {
         e.target.style.backgroundColor = "red"
         currentPlayer = "player1"
     }
-    
+    //checkForWins(player1Selection)
     // console.log(currentPlayer)
 }
 
@@ -47,27 +49,23 @@ function removeEventListeners() {
 addEventListeners()
 
 function checkForWins(square, player){
+    console.log("checkingForWins")
     let possibleWins = [
         ["row-1","row-2","row-3"], 
         ["row-2","row-3","row-4"],
         ["row-4","row-5","row-6"],
         ["row-3","row-4","row-5"],
-    ]
+        ["row-5","row-6","row-7"],] 
+
+    for(let i = 0; i < possibleWins.length; i++){
+        if (player1Selection === possibleWins[i]) {
+        document.getElementById("print").innerText = "Player1 is the Winner"
+         } else if (player2Selection === possibleWins[i]) {
+            document.getElementById("print").innerText = "Player2 is the Winner"
+         }
     
 }
-
-
-
-// event.target is what is going to be clicked(pokersquare game)
-
-
-
-
-
-
-
-
-
-
-
+}
+    // playersSelction and player2Selection check possible wins
+    // if player1Selection or player2Selection is inside possibleWins then display winner.    
 
