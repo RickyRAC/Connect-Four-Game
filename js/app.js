@@ -1,32 +1,30 @@
-let gameBoard = document.getElementById("gameBoard")
-
-let winners = []
-let player1Selection = []
-let player2Selection = []
-let currentPlayer = 0
-let points1 = 0
-let points = 0
-let size = (7 * 6)
-
-gameBoard.addEventListener('click', boxClick) 
-
-function boxClick(e) {
-let changeTurn = Array.from(gameBoard)
-let index = changeTurn.indexOf(e.target)
-console.log(index)
-
-}
+const gameBoard = document.getElementById("gameBoard")
 
 
 
+//let winners = []
+//let player1Selection = 'blackDisc'
+//let player2Selection = 'redDisc'
+ let currentPlayer = "player1"
+// let points1 = 0
+// let points = 0
 
-// Need to show player1 turn then player2's turn.
-//show the switches
-// function changeTurn(){
-// if(player1Selection ===){
+// event.target is what is going to be clicked(pokersquare game)
+gameBoard.addEventListener('click', changeTurn) 
 
-// }
-// }
+function changeTurn(){
+    if (currentPlayer === "player1"){
+        currentPlayer = "player2"
+    } else if (currentPlayer === "player2") { 
+        currentPlayer = "player1"
+    }
+    console.log(currentPlayer)
+    }
+
+
+
+
+
 
 
 
