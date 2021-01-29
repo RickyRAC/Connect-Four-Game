@@ -43,7 +43,7 @@ function changeTurn(e) {
         // explain 3 boxes in a row to win.
         // player1 === [1,2,3]
          if(row1.style.backgroundColor === "black" &&  row2.style.backgroundColor === "black" && row3.style.backgroundColor === "black"){
-            {alert('Player1 Win!')}
+            return alert('Player1 Win!')
         } else if (row2.style.backgroundColor === "black" &&  row3.style.backgroundColor === "black" && row4.style.backgroundColor === "black"){
             {alert('Player1 Win!')}
         } else if (row3.style.backgroundColor === "black" &&  row4.style.backgroundColor === "black" && row5.style.backgroundColor === "black"){
@@ -105,19 +105,10 @@ function checkForWins(square, player){
          } else if (player2Selection === possibleWins[i]) {
             document.getElementById("print").innerText = "Player2 is the Winner"
          }
-    
+
+         
 } 
 }
-    //  For(i = 0; i < possibleWins.length; i ++){
-    //     if(currentPlayer. === row1 || row3)
-    //     console.log(row1)
-    //     //e.target.style.backgroundColor = "red"
-    //     //currentPlayer = "player1"
-    //    For(j = 0; j < possibleWins[i].length; j ++){
-
-   // }
-//}
-
 
 
 
