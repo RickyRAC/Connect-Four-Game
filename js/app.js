@@ -39,27 +39,34 @@ function changeTurn(e) {
     e.target.removeEventListener('click',changeTurn)
     if (currentPlayer === "player1") {
         player1Selection.push(id)
-        
         e.target.style.backgroundColor = "black"
         // explain 3 boxes in a row to win.
         // player1 === [1,2,3]
          if(row1.style.backgroundColor === "black" &&  row2.style.backgroundColor === "black" && row3.style.backgroundColor === "black"){
-         console.log(player1Selection)
+            {alert('Player1 Win!')}
         } else if (row2.style.backgroundColor === "black" &&  row3.style.backgroundColor === "black" && row4.style.backgroundColor === "black"){
+            {alert('Player1 Win!')}
         } else if (row3.style.backgroundColor === "black" &&  row4.style.backgroundColor === "black" && row5.style.backgroundColor === "black"){
+            {alert('Player1 Win!')}
         } else if (row4.style.backgroundColor === "black" &&  row5.style.backgroundColor === "black" && row6.style.backgroundColor === "black"){
+            {alert('Player1 Win!')}
         } else if (row5.style.backgroundColor === "black" &&  row6.style.backgroundColor === "black" && row7.style.backgroundColor === "black"){
+            {alert('Player1 Win!')}
         } 
         currentPlayer = "player2"
     } else if (currentPlayer === "player2") {        
         player2Selection.push(id)
         e.target.style.backgroundColor = "red"
-        if(row1.style.backgroundColor === "black" &&  row2.style.backgroundColor === "black" && row3.style.backgroundColor === "black"){
-            console.log(player1Selection)
-           } else if (row2.style.backgroundColor === "black" &&  row3.style.backgroundColor === "black" && row4.style.backgroundColor === "black"){
-           } else if (row3.style.backgroundColor === "black" &&  row4.style.backgroundColor === "black" && row5.style.backgroundColor === "black"){
-           } else if (row4.style.backgroundColor === "black" &&  row5.style.backgroundColor === "black" && row6.style.backgroundColor === "black"){
-           } else if (row5.style.backgroundColor === "black" &&  row6.style.backgroundColor === "black" && row7.style.backgroundColor === "black"){
+        if(row1.style.backgroundColor === "red" &&  row2.style.backgroundColor === "red" && row3.style.backgroundColor === "red"){
+            {alert('Player2 Win!')}
+           } else if (row2.style.backgroundColor === "red" &&  row3.style.backgroundColor === "red" && row4.style.backgroundColor === "red"){
+            {alert('Player2 Win!')}
+           } else if (row3.style.backgroundColor === "red" &&  row4.style.backgroundColor === "red" && row5.style.backgroundColor === "red"){
+            {alert('Player2 Win!')}
+           } else if (row4.style.backgroundColor === "red" &&  row5.style.backgroundColor === "red" && row6.style.backgroundColor === "red"){
+            {alert('Player2 Win!')}
+           } else if (row5.style.backgroundColor === "red" &&  row6.style.backgroundColor === "red" && row7.style.backgroundColor === "red"){
+            {alert('Player2 Win!')}
            } 
      currentPlayer = "player1"
     } 
