@@ -10,3 +10,10 @@ Rules: Two-player connection board game, in which the players choose a color and
 Technologies & Code Snippets list of technologies HTML, CSS, Javascript
 
 ![wireframe 1](./assets/ConnectFour.jpg)        
+# Are You Smarter Than A 3rd Grader.
+
+Rules: 
+2 Players
+Game Board is one row of six boxes.
+The first to three boxes in a row wins!!
+
