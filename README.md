@@ -9,7 +9,7 @@ Rules: Two-player connection board game, in which the players choose a color and
 
 Technologies & Code Snippets list of technologies HTML, CSS, Javascript
 
-![wireframe 1](./assets/ConnectFour.jpg)        
+![wireframe 1](./assets/connect-4.png)        
 # Are You Smarter Than A 3rd Grader.
 
 Rules: 
